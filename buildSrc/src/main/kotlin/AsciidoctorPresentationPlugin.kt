@@ -1,3 +1,4 @@
+
 import com.github.jrubygradle.JRubyPlugin
 import org.ajoberstar.gradle.git.ghpages.GithubPagesPlugin
 import org.ajoberstar.gradle.git.ghpages.GithubPagesPluginExtension
@@ -15,8 +16,7 @@ import org.gradle.api.provider.Provider
 import org.gradle.api.tasks.JavaExec
 import org.gradle.api.tasks.TaskProvider
 import org.gradle.api.tasks.util.PatternSet
-import org.gradle.kotlin.dsl.delegateClosureOf
-import org.gradle.kotlin.dsl.dependencies
+import org.gradle.kotlin.dsl.*
 import org.ysb33r.gradle.vfs.VfsPlugin
 import org.ysb33r.gradle.vfs.VfsProxy
 import java.io.File
@@ -52,6 +52,10 @@ class AsciidoctorPresentationPlugin : Plugin<Project> {
         configureAsciidoctorTask(downloadTask, extension, templateDir, revealJsDir)
         configureGitHubPublishing(extension, asciidocRevealOut)
         createExportTasks(project, extension, outputDir, asciidocRevealOut)
+
+        tasks.named("check").configure {
+            dependsOn(tasks.withType<AsciidoctorTask>())
+        }
     }
 
     private
