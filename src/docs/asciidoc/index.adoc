@@ -425,6 +425,7 @@ image::cache-core-public-api-change.png[fix-time-1,806,394,align="center"]
 - Erkennen + Erfassen bald Teil von Gradle Enterprise
 - https://e.grdev.net/scans/tests?failures.failureClassification=non_verification&list.offset=0&list.size=50&list.sortColumn=startTime&list.sortOrder=desc&performance.metric=avoidanceSavings&search.buildToolType=gradle&search.buildToolType=maven&search.rootProjectName=gradle&search.startTimeMax=1575279039410&search.startTimeMin=1574674239410&search.tags=CI&search.tags=FunctionalTest&tests.sortField=failed&tests.unstableOnly&trends.activeMetrics=%7B%22avoidanceSavings%22:%22avoidanceSavings%22%7D&trends.section=overview&trends.timeResolution=day&viewer.tzOffset=60#performance.focusedBuild=ebs7brgn322m4[Demo]
 
+[background-color="#01303a"]
 == Zusammenfassung
 
 - Ohne Zutun werden Builds langsamer und unzuverlässiger
