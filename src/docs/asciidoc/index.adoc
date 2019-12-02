@@ -426,7 +426,12 @@ image::cache-core-public-api-change.png[fix-time-1,806,394,align="center"]
 
 == Zusammenfassung
 
-* Ohne Zutun werden Builds langsamer und unzuverlässiger
+- Ohne Zutun werden Builds langsamer und unzuverlässiger
+- Mit Daten kann man von allen Builds kann man
+** häufigste Probleme erkennen
+** Ursachen leichter finden
+** Probleme beheben bevor sie zu großen Problemen werden
+- Ergebnis: Developer Productivity Engineering macht Builds kontinuierlich schneller und zuverlässiger
 
 == Links
 
