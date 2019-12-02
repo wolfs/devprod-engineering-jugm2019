@@ -124,7 +124,7 @@ erzeugt viele Herausforderungen
 
 - Ein Expertenteam mit Fokus auf Effektivität der Toolchain
   ** Hoher Grad an Automatisierung
-  ** Schnelle Feedback Zyklen
+  ** Schnelle Feedbackzyklen
   ** Zuverlässiges Feedback
 - Anstrengung der ganzen Organisation Entwicklerproduktivität zu steigern
 - Prioritäten und Ziele sind datengetrieben von einer instrumentierten Toolchain
@@ -293,7 +293,7 @@ image::cache-core-public-api-change.png[fix-time-1,806,394,align="center"]
 === Bei Gradle Inc.
 
 - https://builds.gradle.org/project/Gradle_Check?branch=master[CI Pipeline]
-- https://e.grdev.net/scans/performance?failures.failureClassification=non_verification&list.offset=0&list.size=50&list.sortColumn=startTime&list.sortOrder=desc&search.buildToolType=gradle&search.buildToolType=maven&search.rootProjectName=gradle&search.startTimeMax=1574892060096&search.startTimeMin=1572390000000&search.tags=ci&tests.sortField=failed&tests.unstableOnly&trends.section=overview&trends.timeResolution=day&viewer.tzOffset=60[Build Scans]
+- https://e.grdev.net/scans/performance?failures.failureClassification=non_verification&list.offset=0&list.size=50&list.sortColumn=startTime&list.sortOrder=desc&search.buildToolType=gradle&search.buildToolType=maven&search.rootProjectName=gradle&search.startTimeMax=1575289264702&search.startTimeMin=1572822000000&search.tags=ci&search.tags=QuickFeedbackLinuxOnly&tests.sortField=failed&tests.unstableOnly&trends.section=overview&trends.timeResolution=day&viewer.tzOffset=60[Build Scans]
 
 === Inkrementelle Tasks
 
@@ -352,7 +352,7 @@ image::cache-core-public-api-change.png[fix-time-1,806,394,align="center"]
 
 - Für Entwicklerbuilds und CI
 - Build Scans: Lösung in Gradle Enterprise
-- https://e.grdev.net/scans/trends?failures.failureClassification=non_verification&list.offset=0&list.size=50&list.sortColumn=startTime&list.sortOrder=desc&performance.metric=avoidanceSavings&search.buildToolType=gradle&search.buildToolType=maven&search.rootProjectName=gradle&search.startTimeMax=1575046398950&search.startTimeMin=1572562800000&search.tags=local&tests.sortField=failed&tests.unstableOnly&trends.activeMetrics=%7B%22avoidanceSavings%22:%22avoidanceSavings%22%7D&trends.section=overview&trends.timeResolution=day&viewer.tzOffset=60#performance.focusedBuild=ebs7brgn322m4[Demo]
+- https://e.grdev.net/scans/trends?failures.failureClassification=non_verification&list.offset=0&list.size=50&list.sortColumn=startTime&list.sortOrder=desc&performance.metric=avoidanceSavings&search.buildToolType=gradle&search.buildToolType=maven&search.rootProjectName=gradle&search.startTimeMax=1575289350465&search.startTimeMin=1572822000000&search.tags=CI&search.tags=QuickFeedbackLinuxOnly&tests.sortField=failed&tests.unstableOnly&trends.activeMetrics=%7B%22avoidanceSavings%22:%22avoidanceSavings%22%7D&trends.section=overview&trends.timeResolution=day&viewer.tzOffset=60#performance.focusedBuild=ebs7brgn322m4[Demo]
 
 [background-color="#01303a"]
 == Zuverlässige Builds
