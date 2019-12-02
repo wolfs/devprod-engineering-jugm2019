@@ -311,6 +311,7 @@ image::cache-core-public-api-change.png[fix-time-1,806,394,align="center"]
 - Integriert ins Build-System (Gradle / Maven)
 - Hybrid: Benutzt lokale Resourcen als auch Remote Agents
 - Geringer Overhead und Verteilung pro Test-Klasse
+- https://drive.google.com/file/d/1fq9WWDJ_-Spo__N4hbH9i7AHdpej2yeB/view[Demo]
 
 === Ohne Daten keine schnellen Builds
 
