@@ -33,6 +33,14 @@ Senior Software Engineer at Gradle
 +++<div style="padding-top:50px"/>+++
 --
 
+== Wer sind Sie?
+
+[%step]
+* Gradle User
+* Maven User
+* Verantwortlich für Build/CI Pipeline/Entwicklerproduktivität
+* Manager eines Softwareteams
+
 == Agenda
 
 - Warum Developer Productivity Engineering?
@@ -49,10 +57,30 @@ Senior Software Engineer at Gradle
 - Qualität des Dialogs bedingt kreativen "Flow"
 - Ideal: sofort zuverlässige Antworten
 
+[NOTE.speaker]
+--
+Software development is a very creative process.
+It is similar to the creativity of an experimental scientist.
+Scientists have a hypothesis and then enter a dialogue with nature via experiments on whether the hypothesis is correct.
+Our hypotheses is our code and the dialogue is with the compiler, unit, integration, performance tests, other validations and interacting directly with the running software.
+So our creativity requires a dialogue.
+
+The quality of the creative flow for your developers depends on how functional that dialogue is.
+In an ideal world you get the answers instantaneously, the answers are always correct and your changes are immediately available at runtime.
+--
 [%notitle]
-=== Creativer Flow
+=== Kreativer Flow
 
 image::children-developers.jpg[background, size=cover]
+
+[NOTE.speaker]
+--
+This was more or less the experience when we all started with software development.
+This was so much fun, it was so productive and we got hooked up.
+
+Please ask yourself that question:
+When you wrote your first code and it would have taken 1 minute waiting time to change the color of the circle your were drawing, would you have continued with coding?
+--
 
 === Enterprise Softwareentwicklung
 
@@ -73,11 +101,11 @@ erzeugt viele Herausforderungen
 === Enterprise Softwarentwicklung benötigt komplexe Maschinerie
 
 - Toolchain ist komplex mit komplexen Eingaben
-- Komplexität beeinflusst
+- Toolchain beeinflusst
   ** Geschwindigkeit der Iterationen
   ** Feedbackzyklen
   ** Zuverlässigkeit des Feedbacks
-- Effizienz der Toolchain ist der Schlüssel zu kreativem "Flow" und Effektivität der Zusammenarbeit
+- Effizienz der Toolchain ist der Schlüssel zu kreativem Flow und Effektivität der Zusammenarbeit
 
 === Projekterfolg hat negativen Einfluss auf die Effizienz der Toolchain
 
@@ -92,9 +120,9 @@ erzeugt viele Herausforderungen
   ** Ohne Zutun degradiert die Effizienz der Toolchain
   ** Vergrößern des Teams hat fast keinen Einfluss mehr
 
-=== Developer Producitivity Engineering ist notwendig
+=== Developer Producitivity Engineering
 
-- Ein Expertenteam mit Fokus of Effektivität der Toolchain
+- Ein Expertenteam mit Fokus auf Effektivität der Toolchain
   ** Hoher Grad an Automatisierung
   ** Schnelle Feedback Zyklen
   ** Zuverlässiges Feedback
@@ -183,7 +211,7 @@ image::exponential-fix-time.png[fix-time-1,600,371,align="center"]
   ** Erfolgreiche Builds noch länger
   ** Mehr Merge-Konflikte
 
-=== Betroffene Projekte
+=== Ursachen und Effekte
 
 - Schnelle Builds => hohe Wartezeiten
 - Langsame Builds => hohe Wartezeiten + viele Kontextwechsel
@@ -195,7 +223,7 @@ image::exponential-fix-time.png[fix-time-1,600,371,align="center"]
 
 === Lange Feedbackzyklen sind toxisch
 
-- Schlechter kreative Flow
+- Schlechter kreativer Flow
 - Wartezeiten auf Feedback
 - Bugfixen exponentiell teurer
 - Feedback kommt in späteren Stufen
@@ -264,7 +292,8 @@ image::cache-core-public-api-change.png[fix-time-1,806,394,align="center"]
 
 === Bei Gradle Inc.
 
-https://e.grdev.net/scans/performance?failures.failureClassification=non_verification&list.offset=0&list.size=50&list.sortColumn=startTime&list.sortOrder=desc&search.buildToolType=gradle&search.buildToolType=maven&search.rootProjectName=gradle&search.startTimeMax=1574892060096&search.startTimeMin=1572390000000&search.tags=ci&tests.sortField=failed&tests.unstableOnly&trends.section=overview&trends.timeResolution=day&viewer.tzOffset=60[Build Scans]
+- https://builds.gradle.org/project/Gradle_Check?branch=master[CI Pipeline]
+- https://e.grdev.net/scans/performance?failures.failureClassification=non_verification&list.offset=0&list.size=50&list.sortColumn=startTime&list.sortOrder=desc&search.buildToolType=gradle&search.buildToolType=maven&search.rootProjectName=gradle&search.startTimeMax=1574892060096&search.startTimeMin=1572390000000&search.tags=ci&tests.sortField=failed&tests.unstableOnly&trends.section=overview&trends.timeResolution=day&viewer.tzOffset=60[Build Scans]
 
 === Inkrementelle Tasks
 
@@ -321,7 +350,8 @@ https://e.grdev.net/scans/performance?failures.failureClassification=non_verific
 
 === Daten, woher?
 
-- Build scans: Lösung in Gradle Enterprise
+- Für Entwicklerbuilds und CI
+- Build Scans: Lösung in Gradle Enterprise
 - https://e.grdev.net/scans/trends?failures.failureClassification=non_verification&list.offset=0&list.size=50&list.sortColumn=startTime&list.sortOrder=desc&performance.metric=avoidanceSavings&search.buildToolType=gradle&search.buildToolType=maven&search.rootProjectName=gradle&search.startTimeMax=1575046398950&search.startTimeMin=1572562800000&search.tags=local&tests.sortField=failed&tests.unstableOnly&trends.activeMetrics=%7B%22avoidanceSavings%22:%22avoidanceSavings%22%7D&trends.section=overview&trends.timeResolution=day&viewer.tzOffset=60#performance.focusedBuild=ebs7brgn322m4[Demo]
 
 [background-color="#01303a"]
@@ -336,14 +366,15 @@ https://e.grdev.net/scans/performance?failures.failureClassification=non_verific
   ** Kryptischer Fehler, nicht mein Gebiet
   ** Wessen Gebiet ist das überhaupt
   ** Rest des Tages: Fehler finden statt an meinen Sachen arbeiten
+  ** Alternativ: Build nochmal laufen lassen
 
 === Build Fehlerarten
 
-- Verifikationsfehler
+- Verifikationsfehler (gutartig)
 ** Compilefehler
 ** Checkstyle
 ** Test-Fehlschlag
-- Kein Verifikationsfehler
+- Kein Verifikationsfehler (bösartig)
 ** "Blinker" (flaky Test)
 ** Repository nicht verfügbar
 ** OutOfMemory während Build
@@ -362,7 +393,7 @@ https://e.grdev.net/scans/performance?failures.failureClassification=non_verific
 === Ausweg: Daten für alle Builds
 
 - Mit Daten kann man
-** Häufigste Probleme erkenne
+** Häufigste Probleme erkennen
 ** Ursachen leichter finden
 ** Probleme beheben bevor sie zu großen Problemen werden
 - Daten erlauben leichtere Priorisierung
@@ -370,25 +401,45 @@ https://e.grdev.net/scans/performance?failures.failureClassification=non_verific
 
 === Daten, woher?
 
-- Build scans: Lösung in Gradle Enterprise
-- [Demo](https://e.grdev.net/scans/failures?failures.failureClassification=non_verification&list.offset=0&list.size=50&list.sortColumn=startTime&list.sortOrder=desc&performance.metric=avoidanceSavings&search.buildToolType=gradle&search.buildToolType=maven&search.rootProjectName=gradle&search.startTimeMax=1575046398950&search.startTimeMin=1572562800000&search.tags=CI&tests.sortField=failed&tests.unstableOnly&trends.activeMetrics=%7B%22avoidanceSavings%22:%22avoidanceSavings%22%7D&trends.section=overview&trends.timeResolution=day&viewer.tzOffset=60#performance.focusedBuild=ebs7brgn322m4)
+- Build Scans: Lösung in Gradle Enterprise
+- https://e.grdev.net/scans/failures?failures.failureClassification=non_verification&list.offset=0&list.size=50&list.sortColumn=startTime&list.sortOrder=desc&performance.metric=avoidanceSavings&search.buildToolType=gradle&search.buildToolType=maven&search.rootProjectName=gradle&search.startTimeMax=1575046398950&search.startTimeMin=1572562800000&search.tags=CI&tests.sortField=failed&tests.unstableOnly&trends.activeMetrics=%7B%22avoidanceSavings%22:%22avoidanceSavings%22%7D&trends.section=overview&trends.timeResolution=day&viewer.tzOffset=60#performance.focusedBuild=ebs7brgn322m4[Demo]
 
 === Flaky Tests bei Gradle Inc.
 
 - Erkennen und ignorieren
   ** Fehlgeschlagenen Test nochmal laufen lassen
   ** 2 Fehlschläge -> nicht flaky
-  ** 1 Fehlschlag -> flaky
+  ** https://builds.gradle.org/viewLog.html?buildId=29147679[1 Fehlschlag -> flaky]
 - Erfassen
-  ** [Github Issues](https://github.com/gradle/build-tool-flaky-tests/issues)
+  ** https://github.com/gradle/build-tool-flaky-tests/issues[Github Issues]
+  ** https://builds.gradle.org/viewLog.html?buildId=29142748&buildTypeId=Hygiene_CiHealthDaily&tab=report_project363_Dev_prod_dashboard&branch_Hygiene=%3Cdefault%3E[Dashboard]
 - Fixen
   ** Fix-it Days 1x pro Release Zyklus
+-
+
+=== Bald für alle
+
+- Flaky Test Rerun bald as Open Source Plugin / in Gradle
+- Rerun ist schon Teil des Maven Surefire Plugins
 - Erkennen + Erfassen bald Teil von Gradle Enterprise
+- https://e.grdev.net/scans/tests?failures.failureClassification=non_verification&list.offset=0&list.size=50&list.sortColumn=startTime&list.sortOrder=desc&performance.metric=avoidanceSavings&search.buildToolType=gradle&search.buildToolType=maven&search.rootProjectName=gradle&search.startTimeMax=1575279039410&search.startTimeMin=1574674239410&search.tags=CI&search.tags=FunctionalTest&tests.sortField=failed&tests.unstableOnly&trends.activeMetrics=%7B%22avoidanceSavings%22:%22avoidanceSavings%22%7D&trends.section=overview&trends.timeResolution=day&viewer.tzOffset=60#performance.focusedBuild=ebs7brgn322m4[Demo]
 
-== More Resources
+== Zusammenfassung
 
-* Online trainings für Gradle und Gradle Enterprise - https://gradle.com/training/[gradle.com/training]
-* Developer Productivity Ebook - https://gradle.com/developer-productivity-engineering/
+* Ohne Zutun werden Builds langsamer und unzuverlässiger
+
+== Links
+
+* Slides - https://wolfs.github.io/devprod-engineering-jugm2019/[wolfs.github.io/devprod-engineering-jugm2019]
+* Onlinetrainings für Gradle und Gradle Enterprise - https://gradle.com/training/[gradle.com/training]
+* Webcasts - https://gradle.com/blog/tag/webcast/[gradle.com/blog/tag/webcast]
+* Developer Productivity Ebook - https://gradle.com/developer-productivity-engineering/[gradle.com/developer-productivity-engineering]
+* https://gradle.org/[gradle.org] und https://gradle.com/[gradle.com]
+* Gradle stellt ein - https://gradle.com/careers/[gradle.com/careers]
 
 [%notitle]
 == Thank you
+
+image::thank-you.png[background, size=cover]
+
+== Fragen
