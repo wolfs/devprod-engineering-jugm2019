@@ -416,7 +416,6 @@ image::cache-core-public-api-change.png[fix-time-1,806,394,align="center"]
   ** https://builds.gradle.org/viewLog.html?buildId=29142748&buildTypeId=Hygiene_CiHealthDaily&tab=report_project363_Dev_prod_dashboard&branch_Hygiene=%3Cdefault%3E[Dashboard]
 - Fixen
   ** Fix-it Days 1x pro Release Zyklus
--
 
 === Bald für alle
 
